@@ -1,7 +1,26 @@
-$primary-color: white;
+$primary-color: black;
 $accent-color: red;
-$text-color: black;
+$text-color: white;
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
 
 body {
   background: $primary-color;
+  color: $text-color;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+
+  #{&}__paragraph {
+    font-weight: map-get($font-weights, medium);
+  }
+
+  // p {
+  //   font-weight: map-get($font-weights, medium);
+  // }
 }
